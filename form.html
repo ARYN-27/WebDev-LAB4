@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LAB 4 - Form</title>
+
+    <style>
+        h1 {
+            font-weight: 800;
+            margin-top: 2%;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+
+        label {
+            font-weight: 300;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-top: 5px;
+        }
+
+        input {
+            display: table-cell;
+            border: none;
+            border-bottom: 2px solid rgb(189, 189, 189);
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            background: #f1f1f1;
+        }
+
+        select {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            margin: 8px 0;
+            background-color: #f1f1f1;
+        }
+
+        button[type=submit] {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        button[type=cancel] {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        b {
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <ol><a href="/index.html">Home</a></ol>
+            <ol><a href="/form.html">Form</a></ol>
+            <ol><a href="/catalog.html">Order Page</a></ol>
+            <ol><a href="/cart.html">Order Summary</a></ol>
+            <ol class="cart">
+                <a href="cart.html">
+                    Item Selected : <span>0</span>
+                </a>
+            </ol>
+        </ul>
+    </nav>
+    <p id="msg"></p>
+    <div style="margin-left: 15px;">
+        <h1>WELCOME</h1>
+        <h2>Register your account</h2>
+        
+    </div>
+
+    <div class="reg-form">
+        <form onsubmit="confirmation()">
+            <h3>Your Personal Details</h3>
+
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" id='fname' name='fname' placeholder="John" required>
+
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" id='lname' name='lname' placeholder="Doe">
+
+            <label for="user-email"><b>User Email</b></label>
+            <input type="email" id="user-email" name='user-email' placeholder="johndoe@email.com" required>
+
+            <label for="user-phone"><b>Phone Number</b></label>
+            <input type="tel" id="user-phone" name='user-phone' placeholder="xxx-xxx xxxxx" onclick="NumValidation()" required>
+
+
+            <h3>Address Information</h3>
+
+            <label for="Add-Line1"><b>Address Line 1</b></label>
+            <input type="text" id="Add-Line1" name='Add-Line1' placeholder="Address Line 1" required>
+
+            <label for="Add-Line2"><b>Address Line 2</b></label>
+            <input type='text' id="Add-Line2" name='Add-Line2' placeholder="Address Line 2" required>
+
+            <label for="Add-City"><b>City </b></label>
+            <input type='text' id="Add-City" name="Add-City" placeholder="City" required>
+
+            <label for="Add-State"><b>State </b></label>
+            <select name=slist required>
+                <option value="Johor">Johor</option>
+                <option value="Kedah">Kedah</option>
+                <option value="Kelantan">Kelantan</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Labuan">Labuan</option>
+                <option value="Malacca">Malacca</option>
+                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                <option value="Pahang">Pahang</option>
+                <option value="Perak">Perak</option>
+                <option value="Perlis">Perlis</option>
+                <option value="Penang">Penang</option>
+                <option value="Sabah">Sabah</option>
+                <option value="Sarawak">Sarawak</option>
+                <option value="Selangor">Selangor</option>
+                <option value="Terengganu">Terengganu</option>
+            </select>
+
+
+            <label for="Add-Country"><b>Country</b></label>
+            <input type='text' id="Add-Country" name="Add-Country" placeholder="Malaysia" required>
+
+
+            <div style="display: flex; justify-content: center;">
+                <button type="cancel">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function confirmation(form) {
+            var message;
+
+            if (confirm("Do you want to submit?") == true) {
+                message = "Data saved successfully!";
+                alert("Done");
+            } else {
+                message = "Save Canceled!";
+                alert("Cancled");
+            }
+
+            document.getElementById("msg").innerHTML = message;
+        }
+    </script>
+
+</body>
+
+</html>

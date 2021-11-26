@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <title>Catalog</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            margin: 0 -5px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 5px 5px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <ol><a href="/index.html">Home</a></ol>
+            <ol><a href="/form.html">Form</a></ol>
+            <ol><a href="/catalog.html">Order Page</a></ol>
+            
+            <ol><a href="/cart.html">Order Summary</a></ol>
+            <ol class="cart">
+                <a href="cart.html">
+                    Item Selected : <span>0</span>
+                </a>
+            </ol>
+        </ul>
+    </nav>
+   
+
+    <div class="row" style="height: 50%; padding-top: 20px;">
+        <div class="column">
+            <div class="card">
+                <img src="/images/book1.jpg" alt="book1">
+                <h3>Title: Bitcoin for Dummies</h3>
+                <p>Author Name: Prypto , Consumer Dummies</p>
+                <p>ISBN/Ean: 9781119076131</p>
+                <p>Published Date: 2016/03/25</p>
+                <p>Publisher: FOR DUMMIES</p>
+                <h3>Price: RM71</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book2.jpg" alt="book2">
+                <h3>Title: Begin Programming with Python For Dummies</h3>
+                <p>Author Name: John Paul Mueller</p>
+                <p>ISBN/Ean: 9781119457893</p>
+                <p>Published Date: 2018/02/13</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM117</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book3.jpg" alt="book3">
+                <h3>Title: Blockchain Revolution</h3>
+                <p>Author Name: Don Tapscott, Alex Tapscott</p>
+                <p>ISBN/Ean: 9780241237854</p>
+                <p>Published Date: 2016/05/26</p>
+                <p>Publisher: PORTFOLIO UK</p>
+                <h3>Price: RM79</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book4.jpg" alt="book4">
+                <h3>Title: C++ All-in-One For Dummies, 3rd Edition</h3>
+                <p>Author Name: John Paul Mueller, Jeff Cogswell</p>
+                <p>ISBN/Ean: 9781118823781</p>
+                <p>Published Date: 2014/08/08</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM134</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="height: 50%; padding-top: 20px;">
+        <div class="column">
+            <div class="card">
+                <img src="/images/book5.jpg" alt="book5">
+                <h3>Title: Coding All-in-One For Dummies</h3>
+                <p>Author Name: Nikhil Abraham</p>
+                <p>ISBN/Ean: 9781119363026</p>
+                <p>Published Date: 2017/04/21</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM134</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book6.jpg" alt="book6">
+                <h3>Title: Coding For Dummies</h3>
+                <p>Author Name: Nikhil Abraham</p>
+                <p>ISBN/Ean: 9781119293323</p>
+                <p>Published Date: 2019/02/19</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM100</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book7.jpg" alt="book7">
+                <h3>Title: Getting Started With Coding, 2nd Edition</h3>
+                <p>Author Name: Camille Mccue Ph.D</p>
+                <p>ISBN/Ean: 9781119641629</p>
+                <p>Published Date: 2019/04/10</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM34</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book8.jpg" alt="book8">
+                <h3>Title: HTML & CSS</h3>
+                <p>Author Name: Jon Duckett</p>
+                <p>ISBN/Ean: 9781118008188</p>
+                <p>Published Date: 2011/11/08</p>
+                <p>Publisher: JOHN WILEY</p>
+                <h3>Price: RM127</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="height: 50%; padding-top: 20px;">
+        <div class="column">
+            <div class="card">
+                <img src="/images/book9.jpg" alt="book9">
+                <h3>Title: Java All-in-One For Dummies</h3>
+                    <p>Author Name: Doug Lowe</p>
+                    <p>ISBN/Ean: 9781119247791</p>
+                    <p>Published Date: 2017/04/21</p>
+                    <p>Publisher: JOHN WILEY</p>
+                    <h3>Price: RM134</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book10.jpg" alt="book10">
+                <h3>Title: Javascript And Jquery: Interactive Front-End Web Development</h3>
+                    <p>Author Name: Jon Duckett</p>
+                    <p>ISBN/Ean: 9781118531648</p>
+                    <p>Published Date: 2014/06/20</p>
+                    <p>Publisher: JOHN WILEY</p>
+                    <h3>Price: RM134</h3>
+
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/book11.jpg" alt="book11">
+                <h3>Title: Raspberry Pi For Dummies, 3rd Edition</h3>
+                    <p>Author Name: Sean McManus, Mike Cook</p>
+                    <p>ISBN/Ean: 9781119412007</p>
+                    <p>Published Date: 2017/09/12</p>
+                    <p>Publisher: JOHN WILEY</p>
+                    <h3>Price: RM92</h3>
+                <div>
+                    <button class="add-button">Add Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
